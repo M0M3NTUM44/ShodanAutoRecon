@@ -10,11 +10,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-n", "--hostname", help="Target host name", nargs='+')
 parser.add_argument("-ip", "--ipv4", help="Target IPv4 Address", nargs='+')
 parser.add_argument("-ip6", "--ipv6", help="Target IPv6 Address", nargs='+')
+parser.add_argument("-A", "--API", help= "Shodan API key", required=True)
 
 args = parser.parse_args()
 
 # shodan API key
-SHODAN_API_KEY = "ENTER API KEY HERE"
+SHODAN_API_KEY = args.API
 api = shodan.Shodan(SHODAN_API_KEY)
 
 
