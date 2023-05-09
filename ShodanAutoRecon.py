@@ -6,7 +6,7 @@ from shodan import exception
 
 parser = argparse.ArgumentParser()
 
-# -n HOSTNAME -ip IPV4 -ip6 IPv6
+# -A [Shodan API key] -n [HOSTNAME] -ip [IPv4] -ip6 [IPv6]
 parser.add_argument("-n", "--hostname", help="Target host name", nargs='+')
 parser.add_argument("-ip", "--ipv4", help="Target IPv4 Address", nargs='+')
 parser.add_argument("-ip6", "--ipv6", help="Target IPv6 Address", nargs='+')
